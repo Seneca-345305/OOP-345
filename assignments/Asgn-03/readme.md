@@ -419,10 +419,12 @@ Add a `SpellChecker` class to your project. This class holds two parallel arrays
 - `void showStatistics(std::ostream& out) const`: inserts into the parameter how many times each misspelled word has been replaced by the correct word using the current instance. The format of the output is:
 
   ```txt
+  Spellchecker Statistics
   BAD_WORD: CNT replacements<endl>
+  ...
   ```
 
-  where `BAD_WORD` is to be printed on a field of size 15, aligned to the right.
+  where `BAD_WORD` is to be printed on a field of size 15, aligned to the left.
 
   **You will have to design a method to remember how many times each bad word has been replaced.**
 
