@@ -28,7 +28,7 @@ Upon successful completion of this workshop, you will have demonstrated the abil
 All your code should be compiled using this command on `matrix`:
 
 ```bash
-/usr/local/gcc/10.2.0/bin/g++ -Wall -std=c++17 -g -o ws file1.cpp file2.cpp ...
+/usr/local/gcc/13.2.0/bin/g++ -Wall -std=c++17 -g -o ws file1.cpp file2.cpp ...
 ```
 
 - `-Wall`: compiler will report all warnings
@@ -39,7 +39,7 @@ All your code should be compiled using this command on `matrix`:
 After compiling and testing your code, run your program as following to check for possible memory leaks (assuming your executable name is `ws`):
 
 ```bash
-valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes ws
+valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes ./ws
 ```
 
 - `--show-error-list=yes`: show the list of detected errors
@@ -54,7 +54,7 @@ To check the output, use a program that can compare text files.  Search online f
 
 ## A Mailing System
 
-???
+In this program you will create a program that simulates an email server managing the inbox of a single user. The program will load the set of emails from a text file. The program will implement a plugin architecture; each plugin can process the messages and transform them based on the functionality the plugin offers.
 
 Enclose all your source code within the `seneca` namespace and include the necessary guards in each header file.
 
@@ -203,7 +203,7 @@ This module has some missing statements. The missing parts are marked with `TODO
 When the program is started with the command (the files `emails.csv`, `identities.txt`, `spam.txt` is provided):
 
   ```bash
-  ws emails.csv identities.txt spam.txt
+  ./ws emails.csv identities.txt spam.txt
   ```
 
   the output should look like that is the `sample_output.txt` file.
